@@ -1,4 +1,3 @@
-"Valida llos tipos de nivel"
 enum Level{
     principiante
     intermedio
