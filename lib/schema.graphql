@@ -1,4 +1,6 @@
-"Valida llos tipos de nivel"
+#Collection Type
+
+#Valida los tipos de nivel
 enum Level{
     principiante
     intermedio
