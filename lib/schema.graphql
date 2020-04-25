@@ -1,6 +1,8 @@
 #Collection Type
 
-#Valida los tipos de nivel
+"""
+Valida los tipos de nivel
+"""
 enum Level{
     principiante
     intermedio
@@ -41,15 +43,25 @@ type Monitor implements Person{
 
 
 type Query {
-    "Devuelve todos los cursos"
+    """
+    Devuelve todos los cursos
+    """
     getCourses: [Course]
-     "Devuelve un curso"
+    """
+    Devuelve un curso
+    """
     getCourse(id: ID!): Course
-    "Devuelve todos los estudiates"
+    """
+    Devuelve todos los estudiates
+    """
     getPeople: [Person]
-     "Devuelve un estudiante"
+    """
+    Devuelve un estudiante
+    """
     getPerson(id: ID!): Person
-    "Ejecuta una busqueda blogal"
+    """
+    Ejecuta una busqueda blogal
+    """
     searchItems(keyword: String!) : [GlobalSearch]
 }
 
@@ -83,14 +95,24 @@ input PersonEditInput{
 }
 
 type Mutation {
-    "Crea un curso"
+    """
+    Crea un curso
+    """
     createCourse(input: CourseInput!): Course
-    "Edita un curso"
+    """
+    Edita un curso
+    """
     editCourse(_id: ID!, input: CourseEditInput!): Course
-    "Crea un persona"
+    """
+    Crea un persona
+    """
     createPerson(input: PersonInput!): Person
-    "Edita un persona"
+    """
+    Edita un persona
+    """
     editPerson(_id: ID!, input: PersonEditInput!): Person
-    "Agrega una persona a un curso"
+    """
+    Agrega una persona a un curso
+    """
     addPeople(courseId: ID!, personId: ID!): Course
 }
